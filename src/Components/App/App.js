@@ -9,6 +9,8 @@ class App extends React.Component {
     super(props);
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
+    this.updatePlaylistName = this.updatePlaylistName.bind(this);
+    this.savePlaylist = this.savePlaylist.bind(this);
 
     this.state = {
       searchResults: [{name: 'name1', artist: 'artist1', album: 'album1', id: 1}
@@ -42,6 +44,10 @@ class App extends React.Component {
     this.setState({ playlistName: name})
   }
 
+  savePlaylist() {
+    const trackUris = this.state.playlistTracks.map(track => track.uri);
+  }
+
   render() {
     return (
       <div>
@@ -52,7 +58,8 @@ class App extends React.Component {
             <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack}/>
             <Playlist playlistName={this.state.playlistName} 
               playlistTracks={this.state.playlistTracks} 
-              onRemove={this.removeTrack} />
+              onRemove={this.removeTrack} onNameChange={this.updatePlaylistName} 
+              onSave={this.savePlaylist} />
           </div>
         </div>
       </div>
