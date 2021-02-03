@@ -4,7 +4,7 @@
 
 ### Technologies used: HTML | CSS | JavaScript | React.js | npm
 
-#### This project is my first web app built with React. It is intended to dispaly my knowledge of React, HTML, CSS, and Javascript. It uses React Components and interacts with the Spotify API to create custom playlists and save them to the users Spotify account.
+#### This project is my first web app built with React. It is intended to dispaly my knowledge of React, HTML, CSS, and Javascript. The app uses React Components and interacts with the Spotify API to create custom playlists and save them to the user's Spotify account.
 
 ## How to use the App
 
